@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* page ke pure beech me card */
+    background: #fff;
+}
+
+.main {
+    position: relative; /* important */
+    width: 350px;
+}
+
+.main img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.main i {
+    position: absolute;
+    bottom: 10px; /* image ke neeche se 10px */
+    left: 50%;    /* center me lana */
+    transform: translateX(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.main i:hover {
+    transform: translateX(-50%) scale(1.2); /* smooth zoom */
+}
