@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Rating</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f9;
+      font-family: Arial, sans-serif;
+    }
+
+    .stars {
+      display: flex;
+      gap: 8px;
+      cursor: pointer;
+      font-size: 40px;
+      color: lightgray;
+    }
+
+    .stars .active {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars" id="stars">
+    <span data-value="1">★</span>
+    <span data-value="2">★</span>
+    <span data-value="3">★</span>
+    <span data-value="4">★</span>
+    <span data-value="5">★</span>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll("#stars span");
+
+    stars.forEach((star, index) => {
+      star.addEventListener("click", () => {
+        stars.forEach((s, i) => {
+          if (i <= index) {
+            s.classList.add("active");
+          } else {
+            s.classList.remove("active");
+          }
+        });
+        alert(`You rated ${index + 1} star(s)!`);
+      });
+    });
+  </script>
+
+</body>
+</html>
