@@ -1,7 +1,12 @@
+
+*{
+  background-color: rgb(210, 158, 74);
+}
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+    
+
 }
 #main{
  margin-top: 100px;
